@@ -12,4 +12,10 @@ Route::group([
 
     $router->get('/', 'HomeController@index')->name('admin.home');
 
+    $router->resources([
+        'users' => UserController::class,
+        'user-level' => UserLevelController::class,
+        'tag' => TagController::class,
+        'area' => AreaController::class,
+    ]);
 });
